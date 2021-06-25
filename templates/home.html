@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+
+{% block postagens %}
+{% for post in posts %}
+<a href="/posts/{{post.pk}}">
+    <div class="post">
+        <div class="post__titulo">
+            <h1>{{post.titulo}}</h1>
+        </div>
+    </div>
+</a>
+{% endfor %}
+{% endblock %}
